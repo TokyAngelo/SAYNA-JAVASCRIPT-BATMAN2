@@ -42,15 +42,7 @@ async function getQuiz() {
                 quizContents.style.display="none"
                 quiz_result.style.display="block";
                 Button.style.display= "none";
-
-                for(let answer of answerEls){
-                    answer.addEventListener("click", function(){
-                        if(this.textContent == correct){
-                            score ++;
-                        }
-                    })
-                }
-                document.querySelector(".gotScore").textContent = score;
+                document.querySelector(".gotScore").textContent = score++;
             }else {
                 loadQuiz(data.results[quizIndex]);
                 quizIndex++;

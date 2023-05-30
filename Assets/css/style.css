@@ -1,3 +1,5 @@
+@import url("/public/css/game.min.css");
+
 /* Déclaration des variables */
 :root{
     --fontColor:black;;
@@ -395,15 +397,17 @@ footer .footer_social_media{
 footer .footer_social_media img{
     margin: 40px 0;
 }
-@media only screen and(max-width:550px) {
-    .card{
-        display: flex;
-        flex-direction: column;
+@media only screen and(max-width:650px) {
+    .scroll{
+        display: none !important;
     }
-    .card-item{
-        display: flex;
-        flex-direction: column;
+    .content{
+        width: 90%;
+        margin: 0 auto;
     }
 }
+
+
+
 /* THANKS TO ALL THE SAYNA TEAM FOR GIVING MORE THAN THE BEST */
             /* *********HEART******** */
