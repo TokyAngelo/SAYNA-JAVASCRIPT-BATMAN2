@@ -1,0 +1,177 @@
+#basic_section {
+  background-image: url("/public/Assets/Illustrations/Batgame_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 140vh;
+  padding-bottom: 25%;
+  padding-top: 15%;
+}
+
+.align_justify {
+  text-align: justify;
+}
+
+.align_center {
+  text-align: center;
+}
+
+main h2 {
+  width: 40%;
+  font-family: 'Rajdhani';
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+main .hero {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  background-image: url("/public/Assets/Illustrations/Batgame_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#result {
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  width: 40%;
+  font-family: 'Rajdhani';
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: none;
+  color: white;
+  background: linear-gradient(to right, grey, #bb7418);
+}
+
+.button:hover {
+  background: linear-gradient(to left, grey, #bb7418);
+}
+
+.quiz_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quiz_container .headOfQuestion {
+  visibility: hidden;
+  width: 30%;
+  margin-left: 45%;
+}
+
+.quiz_container .quizContents {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.quiz_container .quizContents .quizThumbs {
+  width: 40%;
+}
+
+.quiz_container .quizContents .quizThumbs img {
+  width: auto;
+  transition: all .4 linear;
+  animation: zoom all .4s linear;
+  animation-delay: .4s;
+}
+
+@keyframes zoom {
+  form {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.quiz_container .quizContents .quizs {
+  width: 55%;
+}
+
+.quiz_container .quizContents .quizs .question {
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.quiz_container .quizContents .quizs .quizs_contents {
+  display: none;
+}
+
+.quiz_container .quizContents .quizs .button {
+  display: block;
+}
+
+.quiz_container .quiz_result {
+  position: absolute;
+  display: none;
+  width: 90%;
+  height: 90vh;
+  padding: 0 100px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  background: linear-gradient(to bottom, grey, rgba(187, 116, 10, 0.4));
+}
+
+.quiz_container .quiz_result .closer {
+  position: absolute;
+  border: none;
+  padding: 10px;
+  right: 0;
+  cursor: pointer;
+  color: white;
+  background-color: #bb7418;
+}
+
+.quiz_container .quiz_result h1 {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.quiz_container .quiz_result .button {
+  display: blcok;
+}
+
+.quiz_container .rep {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.quiz_container .rep input {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  outline: 1px solid black;
+  border: none;
+}
+
+.quiz_container .rep input:checked {
+  background-clip: black;
+  outline: 1px solid white;
+}
+
+.quiz_container .rep label {
+  margin-left: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

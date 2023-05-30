@@ -1,0 +1,246 @@
+{
+    "results":[
+        {
+            "category": "superhero",
+            "question":"Quel est l'autre nom de l'Homme-mystère",
+            "answers":[
+                "The Sthinx",
+                "Saphir",
+                "Le Jocker"
+            ],
+            "correct_answer":"The Sthinx",
+            "incorrect_answer": [
+                "Saphir",
+                "Le Jocker"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_3.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Quelle est l’ancienne profession de Harley Quinn",
+            "answers":[
+                "Infirmière",
+                "Psychiatre",
+                "Dentiste"
+
+            ],
+            "correct_answer":"Infirmière",
+            "incorrect_answer": [
+                "Psychiatre",
+                "Dentiste"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_4.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Quel est l’objet fétiche de Double Face",
+            "answers":[
+                "Une pièce",
+                "Un livre",
+                "Un coutea"
+            ],
+            "correct_answer":"Une pièce",
+            "incorrect_answer": [
+                "Un livre",
+                "Un coutea"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_5.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Qui a produit Batman en 1964",
+            "answers":[
+                "Stanley Kubrick",
+                "Andy Warhol",
+                "Peter Jackson"
+            ],
+            "correct_answer":"Stanley Kubrick",
+            "incorrect_answer": [
+                "Andy Warhol",
+                "Peter Jackson"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_6.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Batman c’est aussi le nom d’une ville en...",
+            "answers":[
+                "Turquie",
+                "Islande",
+                "Islande"
+            ],
+            "correct_answer":"Turquie",
+            "incorrect_answer": [
+                "Islande",
+                "Islande"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_7.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Quel vilain apparaît pour la première fois dans le Batman 232",
+            "answers":[
+                "Le Pingouin",
+                "Ra’s al Ghul",
+                "Poison Ivy"
+            ],
+            "correct_answer":"Le Pingouin",
+            "incorrect_answer": [
+                "Ra’s al Ghul",
+                "Poison Ivy"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_8.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Quelle ville Batman défend-il",
+            "answers":[
+                "Gotham City",
+                "Starling City",
+                "Hell’s Kitchen"
+            ],
+            "correct_answer":"Gotham City",
+            "incorrect_answer": [
+                "Starling City",
+                "Hell’s Kitchen"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_10.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Tim Burton a réalisé deux Batman, qui jouait Batman",
+            "answers":[
+                "Georges Clooney",
+                "Val Kilmer",
+                "Mickael Keaton"
+            ],
+            "correct_answer":"Georges Clooney",
+            "incorrect_answer": [
+                "Val Kilmer",
+                "Mickael Keaton"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_11.png"
+        },
+        {
+            "category": "superhero",
+            "question":"Dans son premier Batman (1989) Jack Nicholson jouait :",
+            "answers":[
+                "Le Pingouin",
+                "L’Homme Mystèr",
+                "Le Joker"
+            ],
+            "correct_answer":"Le Pingouin",
+            "incorrect_answer": [
+                "L’Homme Mystèr",
+                "Le Joker"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_12.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Qui est Jonathan Crane",
+            "answers":[
+                "L’Épouvantail",
+                "Le Joker",
+                "Hugo Strange"
+            ],
+            "correct_answer":"L’Épouvantail",
+            "incorrect_answer": [
+                "Le Joker",
+                "Hugo Strange"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_14.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Qui  est  l’interprète  de  Catwoman  dans  le  nouveau Batman de Matt Reeves (2022)",
+            "answers":[
+                "Emma Watson",
+                "Gigi Hadid",
+                "Lola Iolani Momoa",
+                "Zoë Kravitz"
+            ],
+            "correct_answer":"Emma Watson",
+            "incorrect_answer": [
+                "Gigi Hadid",
+                "Lola Iolani Momoa",
+                "Zoë Kravitz"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_17.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Quel est le prénom des parents du jeune Bruce Wayne",
+            "answers":[
+                "Thomas et Martha",
+                "Elaine et George",
+                "Martha et Jame"
+            ],
+            "correct_answer":"Thomas et Martha",
+            "incorrect_answer": [
+                "Elaine et George",
+                "Martha et Jame"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_18.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Qui interprète le Joker en 2008 ",
+            "answers":[
+                "Heath Legder",
+                "Haeth Ledger",
+                "Heath Ledger"
+            ],
+            "correct_answer":"Heath Legder",
+            "incorrect_answer": [
+                "Haeth Ledger",
+                "Heath Ledger"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_19.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"En quelle année Robin fait il sa première apparition",
+            "answers":[
+                1940,
+                1939,
+                1941
+            ],
+            "correct_answer":1940,
+            "incorrect_answer": [
+                1939,
+                1941
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_20.png"
+
+        },
+        {
+            "category": "superhero",
+            "question":"Qui est la fille de Batman et Catwoman (Earth - 2)",
+            "answers":[
+                "Oracle",
+                "Huntress",
+                "Black Canary"
+            ],
+            "correct_answer":"Oracle",
+            "incorrect_answer": [
+                "Huntress",
+                "Black Canary"
+            ],
+            "thumb":"./Assets/Illustrations/Batgame_21.png"
+
+        }
+    ]
+}

@@ -1,0 +1,409 @@
+/* Déclaration des variables */
+:root{
+    --fontColor:black;;
+    --textColor:#FFFFFF;
+    --yellowColor: #FFFF00;
+    --yellowSecondColor: #F8F184;
+    --blueColor:#19587D;
+    --RedColor:#B11313;
+    --darkColor: #000000;
+    --greyColor:#C4C4C4;
+    --gradientPrimary:#eddebf62;
+    --gradientSecondary:#19587d52;
+    --gradientThirth:#8900099c;
+}
+/* Importation des polices externes */
+@font-face {
+    font-family: Rajdhani;
+    src: url('../fonts/Rajdhani-Medium.ttf');
+}
+@font-face {
+    font-family: SpaceGrotesk;
+    src:url('../fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'SpaceGrotesk';
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--textColor);
+    background-color: var(--darkColor);
+}
+h1{
+    font-family: 'Rajdhani';
+    font-size: 36px ;
+    font-weight: 400;
+}
+button{
+    font-family: 'Rajdhani', serif;
+    font-size: 20px;
+}
+h2{
+    font-family: 'SpaceGrotesk';
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/* Structuration de la partie nav */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-left: 40px;
+    margin-top: 4%;
+}
+nav{
+    width: 20%;
+    padding-top: 40px;
+}
+.hover_effect:hover,
+#hover_effect:hover{
+    cursor: pointer;
+    filter: sepia(100%) saturate(1680%);
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--textColor);
+    font-family: 'Rajdhani';
+    opacity: 40%;
+    font-size: 30px;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    opacity: 1;
+}
+/* Mise en place de l'image de fond en haut */
+#hero{
+    background-image: url('../Illustrations/Bathome1.png');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: top center;
+    height:900px;
+}
+#hero .titre{
+    margin: 40px 0;
+}
+#hero .btn{
+    padding: 20px 30px;
+    margin:  0 10px;
+    border: none;
+    border-radius: 0;
+    color: var(--textColor);
+    background: linear-gradient(
+        to right,
+         var(--gradientPrimary), 
+         var(--gradientThirth)
+        /* Mise en degradé de la couleur de fond de deux boutons */
+    );
+    box-shadow: var(--darkColor) 5px 5px 60px;
+    cursor: pointer;
+}
+#hero .btn:hover{
+    background: linear-gradient(
+        to right,
+        #eddebf, 
+        #890009
+    );
+}
+.fleche{
+    display: block;
+    margin: 0 auto;
+    margin-top: 230px;
+
+}
+.fleche:hover{
+    cursor: pointer;
+    animation: scroll 1s linear infinite;
+}
+@keyframes scroll {
+    0%{
+        transform: translateY(0);
+    }100%{
+        transform: translateY(20px);
+    }
+
+}
+.scroll{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 80px;
+    top: 300px;
+}
+.scroll .social_media{
+    padding: 10px 0;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 300px;
+}
+/* tous les h1 dans une section sauf celui de la premiere section */
+section h1:not(.content h1){ 
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px 0;
+}
+/* toutes les paragraphes sauf celle de la premiere section 
+et ceux de block descriptif de chaque personnage*/
+p:not(.content p,
+    .card .card-item .description p, 
+    .multimedia_section .slider_content p, 
+    .citation_section .citation_card p){
+    text-align: justify;
+    margin-bottom: 40px;
+    width: 80%;
+    font-size: 21px;
+}
+#batman_section{
+    margin-top: 40px;
+}
+.container .nemesis_header{
+    display: flex;
+    align-items: center;
+}
+.allies_section .allies_decoration{
+position: absolute;
+    margin-left: 900px;
+    margin-top: -51px;
+}
+.card{
+    display : flex;
+    justify-content: space-between;
+}
+
+.card .card-item .description{
+    text-align: center;
+}
+.justice_league_image img{
+    width: 100%;
+}
+.multimedia_section .slider{
+    display: flex;
+    width: 60%;
+    margin: 40px auto;
+    font-size: 14px;
+    border-radius: 10px;
+    background:linear-gradient(
+        150deg,
+        var(--gradientPrimary),
+        var(--gradientSecondary)
+    );
+    height: 230px;
+}
+.multimedia_section .slider_image{
+    width: 100%;
+
+}
+.multimedia_section .slider_content{
+    padding: 0 10px;
+}
+.multimedia_section .slider_content p{
+    padding-top: 10px;
+}
+.multimedia_section .slider_button{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 190px;
+}
+.multimedia_section .slider_button button {
+    background: none;
+    border: none;
+}
+.multimedia_section .slider_button img{
+    cursor: pointer;
+}
+.multimedia_section .slider_content span{
+    color: var(--yellowColor);
+}
+.multimedia_section .annonce{
+    padding-top: 70px;
+}
+.contacts_section{
+    background: linear-gradient(
+        150deg,
+        var(--gradientPrimary),
+        var(--gradientSecondary)
+    );
+    padding: 70px 0;
+}
+.contacts_section .contacts{
+    width: 50%;
+    margin: 0 auto;
+}
+.contacts_section .contacts h2{
+    margin-bottom: 32px;
+    font-size: 32px;
+    text-align: center;
+}
+.contacts_section .contacts .titre{
+    display: block;
+    margin: 28px 0;
+}
+
+.contacts_section .contacts .input{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--gradientPrimary);
+    padding: 10px 4px;
+}
+
+.contacts_section .contacts .news{
+    justify-content: space-between;
+    display: flex;
+    margin:20px 0; 
+    border-bottom: 2px solid var(--gradientPrimary);
+}
+.contacts_section .contacts .news img{
+    height: 20px;
+    transform: rotate(90deg);
+}
+
+::placeholder{
+    color: var(--gradientPrimary);
+    width: 50%;
+    margin: 0 auto;
+            }::-webkit-input-placeholder{
+                color: var(--gradientPrimary);
+                width: 50%;
+                margin: 0 auto;
+                    }::-moz-placeholder{
+                        color: var(--gradientPrimary);
+                        width: 50%;
+                        margin: 0 auto;
+                            }
+.contacts_section .news_buttons{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.contacts_section .news_buttons .radio{
+    opacity: 0;
+}
+.contacts_section .news_buttons label{
+    cursor: pointer;
+    border: 1px solid var(--greyColor);
+    padding: 10px 20px;
+    -o-border-image: linear-gradient(
+        70deg,
+        var(--gradientPrimary),
+        var(--gradientThirth)
+    )1;;
+    border-image: linear-gradient(
+        70deg,
+        var(--gradientPrimary),
+        var(--gradientThirth)
+    )1;
+}
+.contacts_section .form .submit{
+    display: block;
+    border: 0;
+    padding: 15px 40px;
+    margin: 0px auto;
+    margin-top: 20px;
+    color: var(--textColor);
+    cursor: pointer;
+    background: linear-gradient(
+        to right,
+        var(--gradientPrimary),
+        var(--gradientThirth)
+    );
+}
+.contacts_section .form .submit:hover{
+    background: linear-gradient(
+        to right,
+        #eddebf, 
+        #890009
+    );
+}
+.citation_section{
+    margin: 70px;
+}
+.citation_section .citation_card{
+    font-family: 'Rajdhani',sans-serif;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.citation_section .citation_card .citation_author{
+    padding-top: 30px;
+    font-size: 14px;
+}
+.citation_section .second_quotation{
+    float: right;
+}
+.citation_section .circle_div{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+}
+.citation_section .circle_div .div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--blueColor);
+    cursor: pointer;
+}
+.citation_section .circle_div #Different{
+    background-color: var(--blueColor);
+}
+footer{
+    margin: 90px 0;
+}
+footer .container .wb_items{
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer .footer_social_media{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer .footer_social_media img{
+    margin: 40px 0;
+}
+@media only screen and(max-width:550px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-item{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* THANKS TO ALL THE SAYNA TEAM FOR GIVING MORE THAN THE BEST */
+            /* *********HEART******** */

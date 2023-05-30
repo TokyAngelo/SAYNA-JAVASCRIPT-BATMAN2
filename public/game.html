@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/css/style.css">
+    <link rel="stylesheet" href="/public/css/game.css">
+    <title>Game</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img class="hover_effect" src="/Assets/Logo/logohome.png" alt=""></a>
+        </div>
+        <nav class="navbar">
+            <ul class="Menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Game</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main>
+        <div class="scroll">
+            <a href="#hero"><img id="hover_effect" src="/Assets/Logo/logo_bat_flèche.png" alt=""></a>
+            <img id="hover_effect" class="social_media" src="/Assets/Logo/icon_facebook.png" alt="">
+            <img id="hover_effect" class="social_media" src="/Assets/Logo/icon_ig.png" alt="">
+            <img id="hover_effect" class="social_media" src="/Assets/Logo/icon_tw.png" alt="">
+            <a href="#footer"><img id="hover_effect" src="/Assets/Logo/logo_bat_flèche_2.png" alt=""></a>
+    </div>
+    <section id="basic_section">
+        <div  class="container">
+            <h2>Let'us play a litle game ...</h2>
+        </div>
+        <a href="" class="arrow_down">
+            <img class="fleche" src="/Assets/Logo/flèche_down_header.png" alt="">
+        </a>
+        <!--Les icons dans le côté droit de la partie header-->
+    </section>
+    <section class="second_section">
+        <div class="container">
+ 
+            <h1 class="align_center">
+                connaissez vous bien le chevalier noir ?
+            </h1>
+            <div class="hero"></div>
+            <div class="quiz_container">
+                <div class="headOfQuestion">
+                    <h2 class=""><span class="questionRank"></span>/15</h2>
+                </div>
+                <div class="quizContents">
+                    <div class="quizThumbs">
+                        <!-- Image à inserer automatiquement -->
+                    </div>
+                    <div class="quizs">
+                        <div class="quizs_contents">
+                            <span class="question"> </span>
+                            <div class="rep" id="rep1">
+                                <input class="answer" type="checkbox" name="reponse1" id="reponse1" autocomplete="off"><label id="answer" class="answer1" for="reponse1">Reponse 1</label>
+                            </div>
+                            <div class="rep" id="rep2">
+                                <input class="answer" type="checkbox" name="reponse2" id="reponse2" autocomplete="off"><label id="answer" class="answer2" for="reponse2">Reponse 2</label>
+                            </div>
+                            <div class="rep" id="rep3">
+                                <input class="answer" type="checkbox" name="reponse3" id="reponse3" autocomplete="off"><label id="answer" class="answer3" for="reponse3">Reponse 3</label>
+                            </div>
+                        </div>
+                        <div class="quiz_starter">
+                            <button class="button" id="start">Demarrer le quiz</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="quiz_result">
+                    <button class="closer">Fermer</button>
+                    <h1>C'est pas tout à fait ça</h1>
+                    <span>
+                        Oulo! Hereusement que le Riddler est sous les verrous... Il faut que vous vous repassiez les films, cette fois en enlevant peut-être le masque qui vous a bloqué la vue ! Aller, rien n'est persu ! 
+                    </span>
+                    <h1 class="gotScore"></h1>
+                    <button id="result" class="button">Recommencer</button>
+                </div>  
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div id="footer" class="container">
+            <div class="wb_items">
+                <img src="/Assets/Logo/icon_WB.png" alt="">
+                <span>
+                    Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan &
+                    Snyder & Reeves
+                </span>
+            </div>
+            <div class="footer_social_media">
+                <a class="social_medias" href="#">
+                    <img class="hover_effect" src="/Assets/Logo/logo_sayna_white.png" alt="">
+                    <img class="hover_effect" src="/Assets/Logo/icon_x.png" alt="">
+                    <img class="hover_effect" src="/Assets/Logo/icon_DC.png" alt="">
+                </a>
+                <a class="social_medias" href="#"><img class="hover_effect" src="/Assets/Logo/icon_facebook.png" alt=""></a>
+                <a class="social_medias" href="#"><img class="hover_effect" src="/Assets/Logo/icon_ig.png" alt=""></a>
+                <a class="social_medias" href="#"><img class="hover_effect" src="/Assets/Logo/icon_tw.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/public/js/main.js"></script>
+</body>
+</html>
