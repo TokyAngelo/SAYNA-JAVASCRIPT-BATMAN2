@@ -397,16 +397,6 @@ footer .footer_social_media{
 footer .footer_social_media img{
     margin: 40px 0;
 }
-@media only screen and(max-width:650px) {
-    .scroll{
-        display: none !important;
-    }
-    .content{
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
 
 
 /* THANKS TO ALL THE SAYNA TEAM FOR GIVING MORE THAN THE BEST */

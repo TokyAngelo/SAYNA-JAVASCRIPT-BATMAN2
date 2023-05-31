@@ -19,8 +19,10 @@ async function getQuiz() {
     const response = await fetch(quizURL);
     const data = await response.json();
     let maxIndex = data.results.length -1;
-    let correct = data.results.correct_answer
-    
+    let correct = data.results.map(elem=>{
+        return elem.correct_answer;
+    })
+
     function loadQuiz(ds){
         quizContents.style.display="block";
         questionCtx.style.visibility="visible";
@@ -46,25 +48,21 @@ async function getQuiz() {
             }else {
                 loadQuiz(data.results[quizIndex]);
                 quizIndex++;
+                if (answerEls.textContent == correct[quizIndex]) {
+                    score +=1;
+                }
                 Button.innerHTML = "Question suivante";
             }
             console.log(score);
         }, 500);
     })
     closer.addEventListener("click", function(){
-        quiz_result.style.display="none";
-        loadQuiz(data.results[quizIndex]);
+        window.location.reload();
     })
     
     document.querySelector("#result").addEventListener("click",function(){
-        quiz_result.style.display="none";
-        setTimeout(() => {
-            loadQuiz(data.results[quizIndex]);
-            Button.style.display= "block";
-        }, 1000);
+        window.location.reload();
+          
     });
 }
-
-
-
 getQuiz()
