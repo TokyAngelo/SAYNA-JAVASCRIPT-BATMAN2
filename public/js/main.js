@@ -5,9 +5,7 @@ const answerEls = document.querySelectorAll('#answer');
 const headOfQuestion = document.querySelector(".headOfQuestion");
 const quizContents = document.querySelector(".quizs_contents");
 let questionRank = document.querySelector(".questionRank");
-
 let quizThumb = document.querySelector(".quizThumbs");
-
 const quiz_result = document.querySelector(".quiz_result");
 const closer = document.querySelector(".closer");
 

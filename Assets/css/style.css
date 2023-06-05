@@ -149,6 +149,7 @@ nav ul li a:hover{
     align-items: center;
     right: 80px;
     top: 300px;
+    z-index: 1;
 }
 .scroll .social_media{
     padding: 10px 0;
@@ -222,7 +223,11 @@ position: absolute;
 .multimedia_section .slider_content{
     padding: 0 10px;
 }
+.multimedia_section .slider_content h2{
+    font-size: 1.4rem;
+}
 .multimedia_section .slider_content p{
+    line-height: 1.01;
     padding-top: 10px;
 }
 .multimedia_section .slider_button{
@@ -397,6 +402,28 @@ footer .footer_social_media{
 footer .footer_social_media img{
     margin: 40px 0;
 }
+
+.zoomout{
+    opacity: 0;
+    scale: 0;
+}
+.zoomin{
+    opacity: 1;
+    scale: 1;
+    transition:all 1s linear;
+}
+
+.invisible{
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.visible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s linear;
+}
+
+
 
 
 /* THANKS TO ALL THE SAYNA TEAM FOR GIVING MORE THAN THE BEST */
