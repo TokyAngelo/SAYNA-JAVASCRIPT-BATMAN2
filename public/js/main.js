@@ -30,6 +30,9 @@ async function getQuiz() {
         document.querySelector(".answer3").textContent = ds.answers[2];
 
     } 
+    const isCorrect = function(ans, datas){
+       return ans == datas.correct_answer;
+    }
     Button.addEventListener("click", function(){
         setTimeout(() => {
             if (quizIndex > maxIndex) {
