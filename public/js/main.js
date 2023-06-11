@@ -17,10 +17,6 @@ async function getQuiz() {
     const response = await fetch(quizURL);
     const data = await response.json();
     let maxIndex = data.results.length -1;
-    let correct = data.results.map(elem=>{
-        return elem.correct_answer;
-    })
-
     function loadQuiz(ds){
         quizContents.style.display="block";
         questionCtx.style.visibility="visible";
@@ -33,25 +29,40 @@ async function getQuiz() {
         document.querySelector(".answer2").textContent = ds.answers[1];
         document.querySelector(".answer3").textContent = ds.answers[2];
 
-    }
+    } 
     Button.addEventListener("click", function(){
-
         setTimeout(() => {
             if (quizIndex > maxIndex) {
                 quizIndex = 0;
                 quizContents.style.display="none"
                 quiz_result.style.display="block";
                 Button.style.display= "none";
-                document.querySelector(".gotScore").textContent = score++;
+                document.querySelector(".gotScore").textContent = score;
+                const result_text = [
+                    "Oulo! Hereusement que le Riddler est sous les verrous... Il faut que vous vous repassiez les films, cette fois en enlevant peut-être le masque qui vous a bloqué la vue ! Aller, rien n'est persu ! ",
+                    "Encore un peu d'entrainnement avec le Chevalier Noir vous serait bénéfique, mais vous pouvez marcher la tête haute vos connaissances sont là. A vous de le consolider, foncez Gothaman est votre terrain de chose",
+                    "Vous êtes véritablement un super fan de l'univers de Batman! Comics, Films, rien ne vous échappe. Bruce Wayane a de quoi être fier, Gothaman est en paix et Batman peut prendre sa retraite, vous veuillez aux grains !"
+                ]
+                if (score <10) {
+                    document.querySelector('.quiz_result_encouragement').textContent = result_text[0];
+                    document.querySelector('.quiz_esul_text').textContent= `${score}/15. C'EST PAS TOUT A FAIT CA`
+                }else if( 10 < score < 13){
+                    document.querySelector('.quiz_result_encouragement').textContent = result_text[1];
+                    document.querySelector('.quiz_esul_text').textContent= `${score}/15.PAS MAL`
+                }else if(score>13){
+                    document.querySelector('.quiz_result_encouragement').textContent = result_text[2];
+                    document.querySelector('.quiz_esul_text').textContent= `${score}/15. BRAVO !`
+                }
             }else {
                 loadQuiz(data.results[quizIndex]);
                 quizIndex++;
-                if (answerEls.textContent == correct[quizIndex]) {
-                    score +=1;
-                }
+                document.querySelectorAll(".answer").forEach(function(answer){
+                    if(answer.checked){
+                        score +=1;
+                    }
+                })
                 Button.innerHTML = "Question suivante";
             }
-            console.log(score);
         }, 500);
     })
     closer.addEventListener("click", function(){
