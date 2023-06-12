@@ -30,9 +30,6 @@ async function getQuiz() {
         document.querySelector(".answer3").textContent = ds.answers[2];
 
     } 
-    const isCorrect = function(ans, datas){
-       return ans == datas.correct_answer;
-    }
     Button.addEventListener("click", function(){
         setTimeout(() => {
             if (quizIndex > maxIndex) {
@@ -40,7 +37,6 @@ async function getQuiz() {
                 quizContents.style.display="none"
                 quiz_result.style.display="block";
                 Button.style.display= "none";
-                document.querySelector(".gotScore").textContent = score;
                 const result_text = [
                     "Oulo! Hereusement que le Riddler est sous les verrous... Il faut que vous vous repassiez les films, cette fois en enlevant peut-être le masque qui vous a bloqué la vue ! Aller, rien n'est persu ! ",
                     "Encore un peu d'entrainnement avec le Chevalier Noir vous serait bénéfique, mais vous pouvez marcher la tête haute vos connaissances sont là. A vous de le consolider, foncez Gothaman est votre terrain de chose",
@@ -58,10 +54,16 @@ async function getQuiz() {
                 }
             }else {
                 loadQuiz(data.results[quizIndex]);
+                let correct = data.results[quizIndex].correct_answer;
                 quizIndex++;
-                document.querySelectorAll(".answer").forEach(function(answer){
+                let answers = document.querySelectorAll(".answer");
+                answers.forEach(function(answer){
                     if(answer.checked){
-                        score +=1;
+                        let selectedAnswer = answer.nextSibling.textContent;
+                        if (selectedAnswer == correct) {
+                            score+=1;
+                        }
+                        console.log(correct);
                     }
                 })
                 Button.innerHTML = "Question suivante";
