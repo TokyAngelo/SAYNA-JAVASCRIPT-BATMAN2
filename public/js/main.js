@@ -12,6 +12,8 @@ const closer = document.querySelector(".closer");
 let quizIndex = 0;
 let score = 0;
 
+
+// La fonction ascynchrone qui se charge de la récupération des données dépuis l'API
 async function getQuiz() {
     let quizURL = `http://127.0.0.1:5500/public/js/hero.json`;
     const response = await fetch(quizURL);
@@ -45,12 +47,12 @@ async function getQuiz() {
                 if (score <10) {
                     document.querySelector('.quiz_result_encouragement').textContent = result_text[0];
                     document.querySelector('.quiz_esul_text').textContent= `${score}/15. C'EST PAS TOUT A FAIT CA`
-                }else if( 10 < score < 13){
+                }else if( score<14){
                     document.querySelector('.quiz_result_encouragement').textContent = result_text[1];
-                    document.querySelector('.quiz_esul_text').textContent= `${score}/15.PAS MAL`
-                }else if(score>13){
+                    document.querySelector('.quiz_esul_text').textContent= `${score}/15.PAS MAL`;
+                }else if(score>=14){
                     document.querySelector('.quiz_result_encouragement').textContent = result_text[2];
-                    document.querySelector('.quiz_esul_text').textContent= `${score}/15. BRAVO !`
+                    document.querySelector('.quiz_esul_text').textContent= `${score}/15. BRAVO !`;
                 }
             }else {
                 loadQuiz(data.results[quizIndex]);
@@ -58,6 +60,7 @@ async function getQuiz() {
                 quizIndex++;
                 let answers = document.querySelectorAll(".answer");
                 answers.forEach(function(answer){
+                    // On teste si un element est selectionné
                     if(answer.checked){
                         let selectedAnswer = answer.nextSibling.textContent;
                         if (selectedAnswer == correct) {
@@ -70,6 +73,8 @@ async function getQuiz() {
             }
         }, 500);
     })
+
+    // On reload la page à chaque fois que l'utilisateur ferme le popUp de resultat et le bouton recommencer
     closer.addEventListener("click", function(){
         window.location.reload();
     })
